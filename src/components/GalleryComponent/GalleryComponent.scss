@@ -1,0 +1,105 @@
+@import "./../../variables.scss";
+
+.gallery {
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-bottom: 46px;    
+}
+
+.gallery-item {    
+    padding: 0 12px;  
+    
+    img {
+        width: 100%;
+    }
+}
+
+.gallery-image-wrapper {
+    max-height: 243px;
+    border-radius: 5px;
+    overflow: hidden; 
+}
+
+.react-multi-carousel-dot button {
+    margin-right: 24px;
+    background: $color-faded;
+    border: none;
+}
+
+.react-multi-carousel-dot:last-child button {
+    margin-right: 0;
+}
+
+.react-multi-carousel-dot--active button {    
+    background: $color-gradient;    
+}
+
+.react-multiple-carousel__arrow {
+    bottom: 0;
+    min-width: 32px;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    background: none;
+    border: 3px solid $color-faded;
+    border-radius: 50%;
+    transition: none;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 14px;
+        height: 14px;
+        background-repeat: no-repeat;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    &:hover {
+        background: $color-gradient;
+        border: none;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            bottom: 3px;
+            left: 3px;
+            background: $color-lightest;
+            border-radius: 50%;
+        }
+    }
+}
+
+.react-multiple-carousel__arrow--left {
+    left: 12px;
+
+    &:before {
+        background-image: url("./../../images/leftArrow.svg");
+    }
+}
+
+.react-multiple-carousel__arrow:hover.react-multiple-carousel__arrow--left {   
+
+    &:before {
+        background-image: url("./../../images/leftArrowHover.svg");
+    }
+
+}
+
+.react-multiple-carousel__arrow--right {
+    right: 12px;
+
+    &:before {
+        background-image: url("./../../images/rightArrow.svg");
+    }
+}
+
+.react-multiple-carousel__arrow:hover.react-multiple-carousel__arrow--right {
+    &:before {
+        background-image: url("./../../images/rightArrowHover.svg");
+    }
+    
+}

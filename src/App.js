@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import GalleryComponent from "./components/GalleryComponent/GalleryComponent";
-import GridComponent from "./components/GridComponent";
-import Form from "./components/Form";
+import GridComponent from "./components/GridComponent/GridComponent";
+import Form from "./components/Form/Form";
 import data from "./components/data.json";
-import './App.css';
+import './App.scss';
 
 const App = () => {
   const [components, setComponents] = useState({
@@ -38,7 +38,7 @@ const App = () => {
     : null;
 
   return (
-    <div className="App container-xl text-left">
+    <div className="App container-xl min-vh-100 pb-cus-3 text-left">
       {divs()}
       {form}        
     </div>

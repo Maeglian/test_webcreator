@@ -1,0 +1,30 @@
+@import "./variables.scss";
+@import "./custom-bootstrap.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#root {    
+    background-color: $color-text;
+}
+
+.App {
+    background-color: $color-lightest;
+    overflow: auto;
+}
+
+.btn {
+    border: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: $color-text;
+    background: $color-gradient;
+}

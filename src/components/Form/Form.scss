@@ -1,0 +1,26 @@
+.input-wrapper {
+    position: relative;
+}
+
+::-webkit-inner-spin-button {
+    display: none;
+}
+
+::-webkit-calendar-picker-indicator {
+    visibility: hidden;
+}
+
+input[type="date"] + span {
+    display: block;
+}
+
+input[type="date"] + span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 22px;
+    height: 24px;
+    background: url("./../../images/date.svg") no-repeat;
+    transform: translateY(-50%);
+}

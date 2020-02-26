@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import "./GalleryComponent.css";
+import "./GalleryComponent.scss";
 import leftArrow from "./../../images/leftArrow.svg";
 import rightArrow from "./../../images/rightArrow.svg";
 
@@ -20,15 +20,15 @@ const GalleryComponent = ({title, images, slidesPerView}) => {
 
     const inner = images.map((img, idx) => {
         return (
-            <div>
+            <div class="gallery-image-wrapper">
                 <img src={require(`./../../images/${img}`)} alt="" />
             </div>
         )
     });
     
     return (
-        <>
-            <h1>
+        <section class="mb-cus-2">
+            <h1 class="mt-cus-1 mb-cus-1">
                 {title}
             </h1>
             <Carousel 
@@ -37,12 +37,13 @@ const GalleryComponent = ({title, images, slidesPerView}) => {
                 infinite={true}
                 itemClass="gallery-item"
                 dotListClass="gallery-dots"
-                customLeftArrow={<img src={leftArrow} alt="" />}
-                customRightArrow={<img src={rightArrow} alt="" />}
+                containerClass="gallery"
+                //stomLeftArrow={<img src={leftArrow} alt="" />}
+                //customRightArrow={<img src={rightArrow} alt="" />}
             >
                 {inner}
             </Carousel>
-        </>
+        </section>
     );
 }
 

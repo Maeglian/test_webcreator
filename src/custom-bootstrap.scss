@@ -1,0 +1,70 @@
+@import "./variables.scss";
+
+$h1-font-size: 32px;
+$h2-font-size: 24px;
+$btn-padding-x: 24px;
+$btn-padding-y: 12px;
+
+$grid-gutter-width: 24px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1280px
+) !default;
+
+$spacers: (
+    cus-1: 24px,
+    cus-2: 40px,
+    cus-3: 64px,
+    cus-4: 70px
+);
+
+$label-margin-bottom: 8px;
+$input-border-color: $color-faded;
+$input-color: $color-text;
+$input-focus-border-color: transparent;
+$input-focus-box-shadow: none;
+
+@import "./bootstrap/scss/_functions.scss";
+@import "./bootstrap/scss/_variables.scss";
+@import "./bootstrap/scss/_mixins.scss";
+@import "./bootstrap/scss/_type.scss";
+@import "./bootstrap/scss/_grid.scss";
+@import "./bootstrap/scss/_forms.scss";
+@import "./bootstrap/scss/_buttons.scss";
+@import "./bootstrap/scss/_utilities.scss";
+@import "./bootstrap/scss/_reboot.scss";
+
+.container-xl {
+    @media (min-width: $screen-desktop) {
+        padding-right: 70px;
+        padding-left: 70px;
+    }
+}
+
+.form-control:focus {
+  position: relative;
+  z-index: 2;
+
+  + span {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    background: $color-gradient;
+    border-radius: $input-border-radius;
+    z-index: 1;
+  }
+}
