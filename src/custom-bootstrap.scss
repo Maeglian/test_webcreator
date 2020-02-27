@@ -35,6 +35,17 @@ $input-color: $color-text;
 $input-focus-border-color: transparent;
 $input-focus-box-shadow: none;
 
+$link-color: $color-accent;
+
+$custom-control-indicator-checked-bg: transparent;
+$custom-control-indicator-border-color: $color-faded;
+$custom-control-indicator-checked-border-color: $color-faded;
+$custom-control-indicator-focus-border-color: $color-faded;
+$custom-checkbox-indicator-border-radius: 2px;
+$custom-checkbox-indicator-icon-checked: url("./../../images/check.svg");
+$custom-control-indicator-size: 1.25rem;
+$custom-control-indicator-bg-size: 15px 12px;
+
 @import "./bootstrap/scss/_functions.scss";
 @import "./bootstrap/scss/_variables.scss";
 @import "./bootstrap/scss/_mixins.scss";
@@ -44,6 +55,7 @@ $input-focus-box-shadow: none;
 @import "./bootstrap/scss/_buttons.scss";
 @import "./bootstrap/scss/_utilities.scss";
 @import "./bootstrap/scss/_reboot.scss";
+@import "./bootstrap/scss/_custom-forms.scss";
 
 .container-xl {
     @media (min-width: $screen-desktop) {
@@ -67,4 +79,8 @@ $input-focus-box-shadow: none;
     border-radius: $input-border-radius;
     z-index: 1;
   }
+}
+
+.custom-checkbox {
+  padding-left: 32px !important;
 }
