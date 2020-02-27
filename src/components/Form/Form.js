@@ -34,6 +34,27 @@ const Form = ({title, fields, groups, submit}) => {
         )
     });
 
+    const checkbox = fields.map(({name, group, type, required, label}) => {
+        /*
+        if (type === "checkbox") {
+            return (
+                <div className="row mb-cus-1">
+                    <div className="form-group col" key={name}>                    
+                    <div class="input-wrapper">
+                        <input className="form-control" id={name} name={name} type={type} required={required} />
+                        <span></span>
+                    </div>
+                    <label htmlFor={name}>
+                        {label}
+                    </label>
+                </div>  
+                </div>
+            )
+        }
+        */
+
+        return null;
+    })
 
     return (
         <form>
@@ -43,10 +64,10 @@ const Form = ({title, fields, groups, submit}) => {
             <div className="row mb-cus-1">
                 {layout}
             </div>
+            {checkbox}
             <button class="btn btn-primary font-weight-bold">
                 {submit.text}
-            </button>
-            
+            </button>            
         </form>
     )
 };
